@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My contact</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a> <br>
+            <a href="about-france.html">About Me</a> <br>
+            <a href="contact-author.html">My Contact</a> <br>
+            <a href="Gallery.html">My Gallery</a> <br>
+        </nav>
+    </header>
+
+    <h2>Contuct Me</h2>
+    <form action="mailto:youremail@example.com" method="post" enctype="text/plain" onsubmit="return validateForm()">
+        
+        <label for="name">Name:</label>
+        <input type="text" placeholder="Enter your name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" placeholder="Enter your email" ><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+        <label>Gender:</label><br>
+        <input type="radio">
+        <label for="male">Male</label>
+        <input type="radio">
+        <label for="female">Female</label><br><br>
+
+        <label>Interests/Subjects:</label><br>
+        <input type="checkbox">
+        <label for="interest1">Technology</label><br>
+        <input type="checkbox">
+        <label for="interest2">Science</label><br>
+        <input type="checkbox">
+        <label for="interest3">Art</label><br><br>
+
+        <!-- Submit Button -->
+        <input type="submit">
+    </form>
+
+    <p>Alternatively, you can contact Me via email: <a href="index.html">My Email</a></p>
+
+    <script>
+        function validateForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill out all required fields.");
+                return false; // prevent form submission
+            }
+            return true;
+        }
+    </script>
+
+   
+
+    
+</body>
+</html>
